@@ -1,12 +1,14 @@
 import type { FC } from 'react';
+import { useState } from 'react';
 import { CardPlan, Menu } from './ui';
 
-interface SidebarProps {
-  collapsed: boolean;
-  toggleCollapse: () => void;
-}
+const Sidebar: FC = () => {
+  const [collapsed, setCollapsed] = useState(false);
 
-const Sidebar: FC<SidebarProps> = ({ collapsed, toggleCollapse }) => {
+  const toggleCollapse = () => {
+    setCollapsed(!collapsed);
+  };
+
   return (
     <aside
       className={`flex flex-col bg-white rounded-xl p-4 text-black ${
