@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CardPlan, Menu } from './ui';
 
 const Sidebar: FC = () => {
@@ -7,7 +7,15 @@ const Sidebar: FC = () => {
 
   const toggleCollapse = () => {
     setCollapsed(!collapsed);
+    localStorage.setItem('collapsed', JSON.stringify(!collapsed));
   };
+
+  useEffect(() => {
+    const isCollapsed = localStorage.getItem('collapsed');
+    if (isCollapsed) {
+      setCollapsed(JSON.parse(isCollapsed));
+    }
+  }, []);
 
   return (
     <aside

@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-//import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 interface MenuItemProps {
   name: string;
@@ -14,9 +14,8 @@ export const MenuItem: FC<MenuItemProps> = ({
   Icon,
   collapsed,
 }) => {
-  //const location = useLocation();
+  const { pathname } = useLocation();
 
-  const { pathname } = window.location;
   return (
     <li
       className={`p-2 rounded-md ${
