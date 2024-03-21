@@ -1,26 +1,35 @@
+import type { FC } from 'react';
+import { CardPlan, Menu } from './ui';
+
 interface SidebarProps {
   collapsed: boolean;
   toggleCollapse: () => void;
 }
 
-const Sidebar = ({ collapsed, toggleCollapse }: SidebarProps) => {
+const Sidebar: FC<SidebarProps> = ({ collapsed, toggleCollapse }) => {
   return (
-    <div
-      className={`rounded-xl ${
+    <aside
+      className={`flex flex-col bg-white rounded-xl p-4 text-black ${
         collapsed
-          ? "w-20 bg-gray-800 transition-all duration-300 ease-in-out"
-          : "w-64 bg-gray-700 transition-all duration-300 ease-in-out"
-      } text-white`}
+          ? 'w-20 gap-8 bg-gray-800 transition-all duration-300 ease-in-out'
+          : 'w-[22%] gap-12 bg-gray-700 transition-all duration-300 ease-in-out'
+      }`}
     >
-      <div className="toggle-btn p-2" onClick={toggleCollapse}>
-        {collapsed ? <>&#x25BA;</> : <>&#x25C0;</>}
-      </div>
-      <ul>
-        <li className="py-2">Item 1</li>
-        <li className="py-2">Item 2</li>
-        <li className="py-2">Item 3</li>
-      </ul>
-    </div>
+      <button className="font-medium self-end p-2" onClick={toggleCollapse}>
+        {collapsed ? <>&#5171;</> : <>&#5176;</>}
+      </button>
+
+      <img
+        className="rounded-2xl object-cover self-center"
+        alt="logo-dashboard"
+        src="./logo.png"
+        width={80}
+        height={80}
+      />
+      <Menu collapsed={collapsed} />
+
+      {!collapsed && <CardPlan />}
+    </aside>
   );
 };
 
