@@ -17,7 +17,7 @@ export const VideoList = () => {
           <ArrowLeftSvg width={32} height={32} className="text-white" />
         </button>
 
-        <h1 className="text-2xl">Video List /</h1>
+        <h1 className="text-2xl">Home /</h1>
         <h1 className="text-2xl font-bold">
           {TABLE_BODY.find((item) => item?.id === +id!)?.name}
         </h1>

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import { useState, useEffect } from 'react';
+
 import { CardPlan, Menu } from './ui';
 
 const Sidebar: FC = () => {
