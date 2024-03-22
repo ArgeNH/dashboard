@@ -19,7 +19,7 @@ const Sidebar: FC = () => {
 
   return (
     <aside
-      className={`flex flex-col bg-white rounded-xl p-4 text-black ${
+      className={`flex-col bg-white rounded-xl p-4 text-black hidden md:flex ${
         collapsed
           ? 'w-20 gap-8 bg-gray-800 transition-all duration-300 ease-in-out'
           : 'w-[22%] gap-12 bg-gray-700 transition-all duration-300 ease-in-out'

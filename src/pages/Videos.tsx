@@ -9,7 +9,7 @@ export const Videos = () => {
 
   return (
     <>
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-col gap-4 justify-between md:flex-row">
         <article className="flex flex-row gap-4">
           {TabItems.map((item, index) => (
             <Tab
@@ -20,7 +20,7 @@ export const Videos = () => {
             />
           ))}
         </article>
-        <article className="flex flex-row gap-4">
+        <article className="flex flex-col gap-4 md:flex-row">
           <Button variant="secondary">
             <FolderSvg width={24} height={24} /> Nueva Carpeta
           </Button>
@@ -30,7 +30,7 @@ export const Videos = () => {
         </article>
       </div>
 
-      <article className="p-1 inline-flex gap-2 justify-center items-center my-14 border-2 rounded-lg w-[40%]">
+      <article className="p-1 inline-flex gap-2 justify-center items-center my-6 border-2 rounded-lg w-[100%] md:w-[50%] md:my-14">
         <SearchSvg width={30} height={30} className="ml-3 text-secondary-300" />
         <input
           type="text"
@@ -39,7 +39,7 @@ export const Videos = () => {
         />
       </article>
 
-      <div className="relative w-full overflow-auto">
+      <div className="overflow-y-auto max-h-[70%] md:max-h-[100%]">
         <Table
           Icon={FolderSvg}
           bodyItems={TABLE_BODY}

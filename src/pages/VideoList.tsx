@@ -9,22 +9,21 @@ export const VideoList = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex flex-row justify-start items-center gap-4">
+      <div className="flex flex-col justify-start items-center gap-4 md:flex-row">
         <button
           className="bg-primary-700 p-2 rounded-md"
           onClick={() => navigate(-1)}
         >
-          <ArrowLeftSvg width={35} height={35} className="text-white" />
+          <ArrowLeftSvg width={32} height={32} className="text-white" />
         </button>
 
-        <h1 className="text-2xl">Video List</h1>
-        <span className="text-2xl">/</span>
+        <h1 className="text-2xl">Video List /</h1>
         <h1 className="text-2xl font-bold">
           {TABLE_BODY.find((item) => item?.id === +id!)?.name}
         </h1>
       </div>
 
-      <div className="relative w-full overflow-auto mt-10">
+      <div className="overflow-y-auto max-h-[80%] md:max-h-[100%] mt-10">
         <Table
           Icon={PlayerSvg}
           bodyItems={TABLE_BODY_VIDEOS}

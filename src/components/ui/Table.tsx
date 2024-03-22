@@ -20,13 +20,15 @@ export const Table: FC<TableProps> = ({
   const navigate = useNavigate();
 
   return (
-    <table className="w-full caption-bottom">
+    <table className="table-auto w-full caption-bottom">
       <thead className="border-b">
         <tr className="border-b-2 transition-colors hover:bg-secondary-100 data-[state=selected]:bg-secondary-200">
           <th className="h-12 pl-4 text-left align-middle font-medium">
             <CheckBox id="selected-all" role="checkbox" />
           </th>
-          <th className="h-12 text-left align-middle font-medium">Nombre</th>
+          <th className="h-12 text-left align-middle font-medium pl-2 sm:pl-2 md:pl-0 w-[50%]">
+            Nombre
+          </th>
           {headItems.map((item, index) => (
             <th
               key={index}
@@ -47,8 +49,8 @@ export const Table: FC<TableProps> = ({
             <td className="pl-4 align-middle">
               <CheckBox />
             </td>
-            <td className="inline-flex gap-4 items-center py-3 align-middle ">
-              <Icon width={30} height={30} className="text-primary-700" />
+            <td className="inline-flex gap-4 items-center py-3 align-middle pl-2 md:pl-0">
+              <Icon className="text-primary-700 w-6 h-6 md:w-8 md:h-8" />
               {item.name}
             </td>
             <td className="pr-6 text-right align-middle">
