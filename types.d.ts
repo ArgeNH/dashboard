@@ -14,10 +14,11 @@ export type PlanType = {
   value: number;
 };
 
-export type TableType = {
+export type FolderType = {
   id: number;
   name: string;
-  videos: number;
+  videos?: number;
+  duration?: string;
   size: string;
   lastModified: string;
 };

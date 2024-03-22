@@ -1,4 +1,4 @@
-import type { NavType, PlanType, TableType } from '../../types';
+import type { FolderType, NavType, PlanType } from '../../types';
 import {
   AnalyticsSvg,
   DashboardSvg,
@@ -71,7 +71,7 @@ export const TabItems: NavType[] = [
   },
 ];
 
-export const TABLE_BODY: TableType[] = [
+export const TABLE_BODY: FolderType[] = [
   {
     id: 1,
     name: 'Afiliado Master',
@@ -140,6 +140,79 @@ export const TABLE_BODY: TableType[] = [
     name: 'Exportados Wil',
     videos: 14,
     size: '500 MB',
+    lastModified: '5/abr/2023',
+  },
+];
+
+export const TABLE_BODY_VIDEOS: FolderType[] = [
+  {
+    id: 1,
+    name: 'Entrenamiento.mp4',
+    size: '7.3 GB',
+    duration: '04:11:37',
+    lastModified: '30/may/2023',
+  },
+  {
+    id: 2,
+    name: 'Salida-al-mercado-versión nueva.mp4',
+    size: '1.4 GB',
+    duration: '47:55',
+    lastModified: '22/jun/2022',
+  },
+  {
+    id: 3,
+    name: 'Como-cerrar-una-venta.mp4',
+    size: '284 MB',
+    duration: '10:12',
+    lastModified: '11/sep/2021',
+  },
+  {
+    id: 4,
+    name: 'Crea-un-ticket-valioso.mp4',
+    size: '4.3 GB',
+    duration: '03:50:22',
+    lastModified: '21/jun/2023',
+  },
+  {
+    id: 5,
+    name: 'Conquista-el-mercado-digital.mp4',
+    size: '500 MB',
+    duration: '5:00',
+    lastModified: '5/abr/2023',
+  },
+  {
+    id: 6,
+    name: 'Entrenamiento.mp4',
+    size: '7.3 GB',
+    duration: '04:11:37',
+    lastModified: '30/may/2023',
+  },
+  {
+    id: 7,
+    name: 'Salida-al-mercado-versión nueva.mp4',
+    size: '1.4 GB',
+    duration: '47:55',
+    lastModified: '22/jun/2022',
+  },
+  {
+    id: 8,
+    name: 'Como-cerrar-una-venta.mp4',
+    size: '284 MB',
+    duration: '10:12',
+    lastModified: '11/sep/2021',
+  },
+  {
+    id: 9,
+    name: 'Crea-un-ticket-valioso.mp4',
+    size: '4.3 GB',
+    duration: '03:50:22',
+    lastModified: '21/jun/2023',
+  },
+  {
+    id: 10,
+    name: 'Conquista-el-mercado-digital.mp4',
+    size: '500 MB',
+    duration: '5:00',
     lastModified: '5/abr/2023',
   },
 ];

@@ -1,9 +1,16 @@
+import { useParams } from 'react-router-dom';
+
 import { PLAN_ITEMS } from '../../../constants';
 import { Progress } from './Progress';
 
 export const CardPlan = () => {
+  const { id } = useParams();
   return (
-    <article className="flex flex-col gap-6 p-4 rounded-xl bg-secondary-150 mt-40">
+    <article
+      className={`flex flex-col gap-6 p-4 rounded-xl bg-secondary-150 ${
+        id ? 'mt-20' : 'mt-40'
+      }`}
+    >
       <article>
         <h3 className="text-base font-medium">Mi Plan - Plus</h3>
         <p className="text-xs italic">El uso se renueva el: 3-may-23</p>

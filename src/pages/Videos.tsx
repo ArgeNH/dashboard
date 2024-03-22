@@ -40,7 +40,12 @@ export const Videos = () => {
       </article>
 
       <div className="relative w-full overflow-auto">
-        <Table Icon={FolderSvg} bodyItems={TABLE_BODY} />
+        <Table
+          Icon={FolderSvg}
+          bodyItems={TABLE_BODY}
+          headItems={['Videos', 'Tamaño', 'Ultima Modificación']}
+          hasNavigate
+        />
       </div>
     </>
   );
