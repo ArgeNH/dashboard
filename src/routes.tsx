@@ -10,7 +10,10 @@ const AppRouter = () => {
     <Routes>
       <Route path="/*" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="videos" element={<Videos />} />
+        <Route path="videos/*" element={<Videos />}>
+          <Route index element={<Videos />} />
+          <Route path="trash" element={<div>Trash</div>} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

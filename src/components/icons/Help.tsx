@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-export const DashboardSvg: FC<React.SVGProps<SVGSVGElement>> = (props) => (
+export const HelpSvg: FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -12,6 +12,7 @@ export const DashboardSvg: FC<React.SVGProps<SVGSVGElement>> = (props) => (
     {...props}
   >
     <path d="M0 0h24v24H0z" stroke="none" />
-    <path d="M4 4h6v8H4zm0 12h6v4H4zm10-4h6v8h-6zm0-8h6v4h-6z" />
+    <path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0m9 5v.01" />
+    <path d="M12 13.5a1.5 1.5 0 0 1 1-1.5 2.6 2.6 0 1 0-3-4" />
   </svg>
 );

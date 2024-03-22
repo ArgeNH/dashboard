@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+
 import { NAV_ITEMS } from '../../constants';
 import { MenuItem } from './MenuItem';
 

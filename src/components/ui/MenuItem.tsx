@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface MenuItemProps {
   name: string;
@@ -16,21 +16,23 @@ export const MenuItem: FC<MenuItemProps> = ({
 }) => {
   const { pathname } = useLocation();
 
+  const path = pathname.split('/')[1];
+
   return (
     <li
       className={`p-2 rounded-md ${
-        pathname === route
+        path === route.split('/')[1]
           ? 'text-white font-bold bg-primary-700 transition-all duration-300 ease-in-out hover:bg-primary-900'
           : 'text-black transition-all duration-300 ease-in-out hover:bg-secondary-200'
       }`}
     >
-      <a
+      <Link
         className="flex flex-row justify-start items-center gap-8"
-        href={route}
+        to={route}
       >
-        <Icon />
+        <Icon width={35} height={35} />
         {!collapsed && <h3 className="text-xl">{name}</h3>}
-      </a>
+      </Link>
     </li>
   );
 };

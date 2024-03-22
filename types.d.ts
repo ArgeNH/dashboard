@@ -13,3 +13,11 @@ export type PlanType = {
   capacity: string;
   value: number;
 };
+
+export type TableType = {
+  id: number;
+  name: string;
+  videos: number;
+  size: string;
+  lastModified: string;
+};

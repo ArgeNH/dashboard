@@ -5,3 +5,5 @@ export * from './Analytics';
 export * from './Settings';
 export * from './Library';
 export * from './Trash';
+export * from './Help';
+export * from './Search';

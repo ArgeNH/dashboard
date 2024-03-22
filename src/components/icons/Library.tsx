@@ -1,15 +1,15 @@
-export const LibrarySvg = () => (
+import type { FC } from 'react';
+
+export const LibrarySvg: FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="icon icon-tabler icon-tabler-books"
-    width={44}
-    height={44}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
     fill="none"
     strokeLinecap="round"
     strokeLinejoin="round"
+    {...props}
   >
     <path d="M0 0h24v24H0z" stroke="none" />
     <path d="M5 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1zm4 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM5 8h4m0 8h4" />

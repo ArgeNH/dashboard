@@ -1,16 +1,16 @@
-export const PlayerSvg = () => (
+import type { FC } from 'react';
+
+export const PlayerSvg: FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
     transform="rotate(90)"
     xmlns="http://www.w3.org/2000/svg"
-    className="icon icon-tabler icon-tabler-playstation-triangle"
-    width={35}
-    height={35}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
     fill="none"
     strokeLinecap="round"
     strokeLinejoin="round"
+    {...props}
   >
     <path d="M0 0h24v24H0z" stroke="none" />
     <path d="M12 21a9 9 0 0 0 9-9 9 9 0 0 0-9-9 9 9 0 0 0-9 9 9 9 0 0 0 9 9" />

@@ -6,7 +6,7 @@ export const CardPlan = () => {
     <article className="flex flex-col gap-6 p-4 rounded-xl bg-secondary-150 mt-40">
       <article>
         <h3 className="text-base font-medium">Mi Plan - Plus</h3>
-        <p className="text-xs italic">El uso se renueva el 3-may-23</p>
+        <p className="text-xs italic">El uso se renueva el: 3-may-23</p>
       </article>
       <article className="flex flex-col gap-2">
         {PLAN_ITEMS.map((item) => (
